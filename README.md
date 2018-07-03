@@ -65,18 +65,16 @@ class TxIn(TxIn):
         Returns the amount in satoshi
         '''
         # use self.fetch_tx to get the transaction
-        tx = self.fetch_tx(testnet=testnet)
         # get the output at self.prev_index
         # return the amount property
-        return tx.tx_outs[self.prev_index].amount
+        pass
 
     def script_pubkey(self, testnet=False):
         '''Get the scriptPubKey by looking up the tx hash on libbitcoin server
         Returns the binary scriptpubkey
         '''
         # use self.fetch_tx to get the transaction
-        tx = self.fetch_tx(testnet=testnet)
         # get the output at self.prev_index
-        # return the script_pubkey property and serialize
-        return tx.tx_outs[self.prev_index].script_pubkey
+        # return the script_pubkey property
+        pass
 ```

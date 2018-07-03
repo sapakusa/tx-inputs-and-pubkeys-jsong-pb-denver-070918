@@ -3,18 +3,6 @@
 
 
 ```python
-# import everything and define a test runner function
-from importlib import reload
-from helper import run_test
-
-import ecc
-import helper
-import script
-import tx
-```
-
-
-```python
 # Example of how to look up a transaction using fetch_tx() method
 
 from tx import TxIn

@@ -1,10 +1,9 @@
 
-# Inputs and pubkeys [NOT WORKING]
+# Inputs and PubKeys
 
+Example of how to look up a transaction using fetch_tx() method
 
 ```python
-# Example of how to look up a transaction using fetch_tx() method
-
 from tx import TxIn
 
 prev_tx = bytes.fromhex('d1c789a9c60383bf715f3f6ad9d14b91fe55f3deb369fe5d9280cb1a01793f81') 

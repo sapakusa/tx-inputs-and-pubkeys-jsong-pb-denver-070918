@@ -11,7 +11,7 @@ tx_in = TxIn(prev_tx, 0, b'', 0xffffffff)
 print(tx_in.fetch_tx())
 ```
 
-### Exercise
+### Try it
 
 
 #### What is the value and scriptPubKey of the 0th output of this transaction?
@@ -21,18 +21,10 @@ d1c789a9c60383bf715f3f6ad9d14b91fe55f3deb369fe5d9280cb1a01793f81
 
 
 ```python
-# Exercise 4.1
-
 from tx import TxIn
 
 prev_tx = bytes.fromhex('d1c789a9c60383bf715f3f6ad9d14b91fe55f3deb369fe5d9280cb1a01793f81') 
 prev_index = 0
-
-# create the transaction input (use blank script_sig and 0xffffffff for sequence)
-# fetch the transaction
-# grab the output at the index
-# show the amount
-# show the script_pubkey
 ```
 
 ### Test Driven Exercise

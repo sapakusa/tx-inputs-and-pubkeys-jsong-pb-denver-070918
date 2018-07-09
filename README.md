@@ -1,5 +1,5 @@
 
-# Inputs and pubkeys [NOT WORKING]
+# Looking Up Transactions
 
 
 ```python
@@ -49,10 +49,6 @@ prev_index = 0
 ```
 
 ### Test Driven Exercise
-
-
-#### Bonus:
-#### Cache the requests so that you don't hit blockcypher.com multiple times for the same transaction output.
 
 
 ```python

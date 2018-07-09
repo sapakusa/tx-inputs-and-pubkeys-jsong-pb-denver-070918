@@ -1,11 +1,11 @@
 
 # Looking Up Transactions
 
-Example of how to look up a transaction using fetch_tx() method
 
 ```python
-from tx import TxIn
+# Example of how to look up a transaction using fetch_tx() method
 
+from tx import TxIn
 prev_tx = bytes.fromhex('d1c789a9c60383bf715f3f6ad9d14b91fe55f3deb369fe5d9280cb1a01793f81') 
 tx_in = TxIn(prev_tx, 0, b'', 0xffffffff)
 print(tx_in.fetch_tx())
@@ -21,12 +21,21 @@ d1c789a9c60383bf715f3f6ad9d14b91fe55f3deb369fe5d9280cb1a01793f81
 
 
 ```python
-# Example of how to look up a transaction using fetch_tx() method
-
 from tx import TxIn
+
 prev_tx = bytes.fromhex('d1c789a9c60383bf715f3f6ad9d14b91fe55f3deb369fe5d9280cb1a01793f81') 
+prev_index = 0
+
+# create the transaction input (use blank script_sig and 0xffffffff for sequence)
 tx_in = TxIn(prev_tx, 0, b'', 0xffffffff)
-print(tx_in.fetch_tx())
+# fetch the transaction
+t = tx_in.fetch_tx()
+# grab the output at the index
+prev_output = t.tx_outs[prev_index]
+# show the amount
+print(prev_output.amount)
+# show the script_pubkey
+print(prev_output.script_pubkey)
 ```
 
 ### Test Driven Exercise
